@@ -1,2 +1,52 @@
-# Foodies-Organic-Food-Store-Landing-Page
-A responsive landing page for Foodies Organic Food Store featuring fresh vegetable products and healthy food options. Built with HTML5, CSS3, and Font Awesome icons. Includes hero section, product showcase, features, testimonials, and responsive design for both mobile and desktop users.
+# Assignment : 02
+### Name : Md. Shahbaj Taher
+### Email: shahbajtahershezan@gmail.com
+
+# Foodies Organic Food Store Landing Page
+
+A modern, responsive landing page for an organic food store showcasing fresh vegetables and healthy food products.
+
+## Features
+
+- 🎨 Modern and clean design
+- 📱 Fully responsive layout
+- 🥗 Food product showcase
+- ⭐ Customer ratings and reviews
+- 🚀 Fast loading performance
+- ♿ Accessible design
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Font Awesome Icons
+- Google Fonts (Inter)
+
+## Sections Included
+
+1. Navigation Bar
+2. Hero Section 
+3. Company Logos
+4. Features Section
+5. Benefits Showcase
+6. Statistics Section
+7. Blog/Content Section
+8. Product Showcase
+9. End Section 
+10. Footer with Links
+
+## Setup
+
+1. Clone the repository
+2. Open `index.html` in your browser
+3. No build process required
+
+## Responsive Design
+
+- Mobile-first approach
+- Tablet and desktop optimizations
+- Cross-browser compatible
+
+## License
+
+MIT License - feel free to use this project for learning purposes.
