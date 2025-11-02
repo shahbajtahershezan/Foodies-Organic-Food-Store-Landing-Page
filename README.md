@@ -1,6 +1,7 @@
 # Assignment : 02
 ### Name : Md. Shahbaj Taher
 ### Email: shahbajtahershezan@gmail.com
+### Live Url: https://starlit-phoenix-7a5a87.netlify.app/
 
 # Foodies Organic Food Store Landing Page
 
