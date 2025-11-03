@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,12 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Prevent horizontal overflow */
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             max-width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         * {
@@ -76,9 +80,11 @@
 
         /* mobile drawer menu */
         .mobile-drawer {
-            display: none; /* only on small screens */
+            display: none;
+            /* only on small screens */
             position: fixed;
-            inset: 0; /* full screen */
+            inset: 0;
+            /* full screen */
             background: rgba(0, 0, 0, 0.4);
             z-index: 40;
             transition: opacity 0.22s;
@@ -104,10 +110,12 @@
             flex-direction: column;
             gap: 18px;
         }
+
         .mobile-drawer.open {
             opacity: 1;
             pointer-events: auto;
         }
+
         .mobile-drawer.open .panel {
             transform: translateX(0);
         }
@@ -120,6 +128,7 @@
             padding: 10px 6px;
             border-radius: 6px;
         }
+
         .mobile-drawer a:hover {
             background: #f3f9f6;
             color: #059669;
@@ -139,6 +148,7 @@
             background-color: transparent;
             border: 2px solid #06c167;
         }
+
         .hamburger .line1 {
             height: 3px;
             background-color: #06c167;
@@ -146,6 +156,7 @@
             margin-top: 7px;
             margin-left: 12px;
         }
+
         .hamburger .line2 {
             height: 3px;
             background-color: #06c167;
@@ -153,6 +164,7 @@
             margin-top: 7px;
             margin-left: 12px;
         }
+
         .hamburger .line3 {
             height: 3px;
             background-color: #06c167;
@@ -167,6 +179,7 @@
             text-align: center;
             font-family: "Inter", sans-serif;
         }
+
         .contents p {
             text-align: center;
             font-weight: 400;
@@ -175,6 +188,7 @@
             color: #1d1d1f;
             margin: 25px;
         }
+
         .contents button,
         .buttons button {
             width: 320px;
@@ -189,17 +203,17 @@
             font-family: "Inter", sans-serif;
             margin: 26px;
         }
+
         .hero {
             background-color: #f3fcf7;
         }
+
         .images-elements {
-            background: url(/assets/Hero-image.png);
             background-position: 185px bottom, right center;
-            width: 320px;
-            height: 480px;
             background-repeat: no-repeat;
             margin: 26px;
         }
+
         .images-elements .ratings {
             width: 230px;
             height: 53px;
@@ -209,9 +223,8 @@
             justify-content: center;
             border-radius: 30px;
             position: relative;
-            top: 354px;
-            left: 45px;
         }
+
         .images-elements .ratings p {
             margin-right: 15px;
             font-family: Inter;
@@ -225,18 +238,32 @@
         .images-elements .ratings {
             margin-bottom: 16px;
         }
+
         .images-elements .ratings2 img {
             width: 40px;
             margin-right: 13px;
         }
+
+        /* Logo section - full left for desktop */
         .company-logo {
-            width: 100%;
-            height: 170px;
-            background-color: #ffffff;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            /* space between logos */
+            position: absolute;
+            top: 701px;
+            left: 142px;
+            /* stick to left side */
+            width: auto;
+            height: 36px;
+            justify-content: flex-start;
+            /* align to left */
         }
+
         .company-logo img {
-            margin: 25px;
+            height: 100%;
+            width: auto;
+            display: block;
         }
 
         .hero-end-line {
@@ -245,9 +272,11 @@
             margin: 37px;
             height: 2px;
         }
+
         .features {
             width: 140px;
         }
+
         .features h3 {
             font-family: Inter;
             font-weight: 400;
@@ -270,15 +299,18 @@
         .features img {
             margin: 20px;
         }
+
         .features-parent1,
         .features-parent2 {
             margin-left: 64px;
             margin-bottom: 60px;
             display: flex;
         }
+
         .review-promo-img img {
             margin: 30px;
         }
+
         .review-promo-section h4 {
             font-family: Inter, sans-serif;
             text-align: center;
@@ -286,6 +318,7 @@
             font-size: 16px;
             color: #1d1d1f;
         }
+
         .review-promo-section h2 {
             color: #1d1d1f;
             font-family: Inter, sans-serif;
@@ -295,6 +328,7 @@
             text-align: center;
             margin: 30px;
         }
+
         .contents-promo {
             background: url(./src/hero-img-plsss.png);
             background-repeat: no-repeat;
@@ -308,6 +342,7 @@
             font-style: Regular;
             font-size: 16px;
         }
+
         .points h3 {
             margin-right: 30px;
             margin-bottom: 20px;
@@ -318,9 +353,11 @@
             top: 3px;
             margin-right: 20px;
         }
+
         .status-img img {
             margin: 30px;
         }
+
         .blog-contents {
             opacity: 0;
         }
@@ -332,6 +369,7 @@
             font-size: 40px;
             color: #06c167;
         }
+
         .counts p {
             font-family: Inter, sans-serif;
             font-weight: 400;
@@ -366,6 +404,7 @@
         .headings p {
             margin: 30px;
         }
+
         .first-blog img {
             width: 100%;
         }
@@ -375,6 +414,7 @@
             margin-left: 30px;
             height: 600px;
         }
+
         .first-blog .blog-contents {
             background-color: #f0f1ec;
             height: 280px;
@@ -384,6 +424,7 @@
             position: relative;
             bottom: 5px;
         }
+
         .first-blog .blog-contents h4 {
             font-family: Inter, sans-serif;
             font-weight: 500;
@@ -392,6 +433,7 @@
             text-align: left;
             margin: 20px;
         }
+
         .first-blog .blog-contents p {
             font-family: Inter, sans-serif;
             font-weight: 400;
@@ -401,6 +443,7 @@
             text-align: left;
             margin: 20px;
         }
+
         .first-blog .blog-contents a {
             font-family: Inter, sans-serif;
             font-weight: 500;
@@ -418,6 +461,7 @@
             text-align: center;
             color: #1d1d1f;
         }
+
         .product-section-heading h3 {
             font-family: Inter, sans-serif;
             font-weight: 500;
@@ -426,9 +470,11 @@
             text-align: center;
             color: #1d1d1f;
         }
+
         .product-section-heading {
             margin: 80px;
         }
+
         .first-product {
             width: 300px;
             height: 390px;
@@ -439,6 +485,7 @@
             text-align: center;
             margin-top: 45px;
         }
+
         .first-product h3 {
             font-family: Inter, sans-serif;
             font-weight: 500;
@@ -447,6 +494,7 @@
             color: #1d1d1f;
             margin: 15px;
         }
+
         .first-product span {
             font-family: Inter, sans-serif;
             font-weight: 400;
@@ -455,6 +503,7 @@
             color: #1d1d1f;
             margin: 90px;
         }
+
         .first-product button {
             font-family: Inter, sans-serif;
             font-weight: 500;
@@ -467,275 +516,191 @@
             cursor: pointer;
             margin: 15px;
         }
+
         .first-product span del {
             color: #6b6b6c;
             margin-right: 10px;
         }
+
         .first-product span strong {
             color: #06c167;
             margin-right: 10px;
         }
+
         .first-product .first-product-img {
             width: 200px;
             margin-top: 15px;
         }
+
         .photo-of-end-section {
             width: 100%;
             height: 460px;
-            background: url(./src/asid-section-dawn-img.png);
+            background: url('assets/veg-end.png') no-repeat center center;
+            background-size: cover;
+            position: relative;
             margin-top: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .border-parent {
             border: 2px solid #76767540;
         }
 
-        .photo-of-end-section .content-of-end h2 {
-            font-family: Inter, sans-serif;
-            font-weight: 500;
-            font-style: Medium;
-            font-size: 40px;
+        .content-of-end {
             text-align: center;
-            color: #ffffff;
+            z-index: 2;
+            padding: 20px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
-        .photo-of-end-section .content-of-end button {
+
+        .content-of-end h2 {
+            font-family: Inter, sans-serif;
+            font-weight: 600;
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .content-of-end button {
             width: 293px;
             height: 79px;
-            background-color: #06c167;
             border: none;
             color: white;
             font-size: 16px;
             font-weight: 500;
             cursor: pointer;
-            font-size: 16px;
             font-family: "Inter", sans-serif;
-            margin-top: 45px;
+            transition: all 0.3s ease;
+            margin-top: 0;
+            background-color: #06c167;
         }
-        .content-of-end {
-            margin: 30px;
+
+        .content-of-end button:hover {
+            transform: scale(1.05);
+            background-color: #059669;
+        }
+
+        /* ========== END SECTION ========== */
+        .end-section {
             position: relative;
-            top: 120px;
-            text-align: center;
-        }
-
-        /* ========== BENEFITS SECTION FROM CODE ========== */
-        .benefit-section {
             width: 100%;
-            background-color: #fff;
-            padding: 100px 5%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
         }
 
-        .benefit-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 115px;
-            flex-wrap: wrap;
+        .photo-of-end-section2 {
+            display: none;
         }
 
-        .benefit-img {
-            flex: 1;
-            min-width: 300px;
+        /* Desktop Styles */
+        @media screen and (min-width: 1024px) {
+            .photo-of-end-section {
+                display: none;
+            }
+
+            .photo-of-end-section2 {
+                display: block;
+                position: relative;
+                width: 100%;
+                height: 460px;
+                background: url('assets/veg-end.png') no-repeat center center;
+                background-size: cover;
+                margin-top: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .end-section-wrapper {
+                position: relative;
+                width: 1440px;
+                height: 460px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .end-bg-img {
+                position: absolute;
+                width: 1170px;
+                height: 459px;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 1;
+                z-index: 1;
+            }
+
+            .end-bg-img img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .end-title {
+                position: absolute;
+                width: 799px;
+                height: auto;
+                top: 110px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-family: Inter, sans-serif;
+                font-weight: 600;
+                font-size: 60px;
+                line-height: 1.2;
+                color: #ffffff;
+                text-align: center;
+                margin: 0;
+                z-index: 2;
+                white-space: pre-line;
+            }
+
+            .end-button {
+                position: absolute;
+                width: 210px;
+                height: 79px;
+                background-color: #06c167;
+                border: none;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                font-family: "Inter", sans-serif;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                top: 293px;
+                left: 50%;
+                transform: translateX(-50%);
+                opacity: 1;
+                z-index: 2;
+            }
+
+            .end-button i {
+                font-size: 18px;
+            }
+
+            .end-button:hover {
+                background-color: #059669;
+            }
         }
 
-        .benefit-img img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .benefit-content {
-            flex: 1;
-            min-width: 300px;
-            text-align: left;
-        }
-
-        .benefit-content h4 {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .benefit-content h2 {
-            font-size: 60px;
-            font-weight: 500;
-            margin-bottom: 30px;
-            color: #111;
-        }
-
-        .benefit-points h3 {
-            font-size: 18px;
-            font-weight: 500;
-            color: #333;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
-        }
-
-        .benefit-points img {
-            width: 20px;
-            height: 20px;
-        }
-
-        /* ========== STATS SECTION  ========== */
-        .status {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 100px 5%;
-        }
-
-        .status-content {
-            flex: 1;
-            text-align: left;
-        }
-
-        .status-content h4 {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .status-content h2 {
-            font-size: 60px;
-            font-weight: 500;
-            margin-bottom: 30px;
-            color: #111;
-        }
-
-        .counts {
-            display: flex;
-            gap: 60px;
-            margin-bottom: 30px;
-        }
-
-        .count-item h3 {
-            font-size: 40px;
-            font-weight: 600;
-            color: #06c167;
-        }
-
-        .count-item p {
-            font-size: 15px;
-            color: #1d1d1f;
-        }
-
-        .status-img {
-            flex: 1;
-            text-align: center;
-        }
-
-        .status-img img {
-            max-width: 100%;
-        }
-   /* ========== END SECTION ========== */
-.end-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.photo-of-end-section {
-    width: 100%;
-    height: 460px;
-    background: url('assets/veg-end.png') no-repeat center center;
-    background-size: cover;
-    position: relative;
-    margin-top: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.photo-of-end-section2 {
-    display: none;
-}
-
-.content-of-end {
-    text-align: center;
-    z-index: 2;
-    padding: 20px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-of-end h2 {
-    font-family: Inter, sans-serif;
-    font-weight: 600;
-    font-size: 40px;
-    color: #ffffff;
-    margin-bottom: 30px;
-    line-height: 1.3;
-    text-align: center;
-}
-
-.content-of-end button {
-    width: 293px;
-    height: 79px;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-    font-family: "Inter", sans-serif;
-    transition: all 0.3s ease;
-    margin-top: 0;
-}
-
-.content-of-end button:hover {
-    transform: scale(1.05);
-}
-
-/* Desktop Styles */
-@media screen and (min-width: 1024px) {
-    .photo-of-end-section {
-        display: none;
-    }
-
-    .photo-of-end-section2 {
-        display: flex;
-        width: 100%;
-        height: 460px;
-        background: url('assets/veg-end.png') no-repeat center center;
-        background-size: cover;
-        margin-top: 90px;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-    }
-
-    .content-of-end h2 {
-        font-family: Inter, sans-serif;
-        font-weight: 600;
-        font-size: 60px;
-        color: #ffffff;
-        text-align: center;
-        margin-bottom: 30px;
-        line-height: 1.2;
-    }
-
-    .content-of-end button {
-        width: 293px;
-        height: 79px;
-        background-color: #06c167;
-        border: none;
-        color: white;
-        font-size: 16px;
-        font-weight: 500;
-        cursor: pointer;
-        font-family: "Inter", sans-serif;
-        margin-top: 0;
-    }
-}
         /* ========== FOOTER FIXES ========== */
         footer {
             background-color: #f8f8f8;
             padding: 60px 5% 30px;
             margin-top: 0;
             width: 100%;
-            margin-left: 0 !important;
         }
 
         .footer-container {
@@ -743,6 +708,8 @@
             grid-template-columns: 1fr;
             gap: 30px;
             margin-bottom: 40px;
+            max-width: 1440px;
+            margin: 0 auto;
         }
 
         .footer-brand {
@@ -868,53 +835,15 @@
             border-top: 1px solid #ddd;
             color: #1d1d1f;
             width: 100%;
-            margin-right: 0 !important;
         }
 
         /* Desktop Styles */
         @media screen and (min-width: 1024px) {
-            .photo-of-end-section {
-                display: none;
-            }
-
-            .photo-of-end-section2 {
-                display: flex;
-                width: 100%;
-                height: 460px;
-                background: #06c167;
-                margin-top: 90px;
-                align-items: center;
-                justify-content: center;
-                position: relative;
-            }
-
-            .content-of-end h2 {
-                font-family: Inter, sans-serif;
-                font-weight: 600;
-                font-style: Semi Bold;
-                font-size: 60px;
-                color: #ffffff;
-                text-align: center;
-                margin-bottom: 30px;
-                line-height: 1.2;
-            }
-
-            .content-of-end button {
-                width: 293px;
-                height: 79px;
-                background-color: white;
-                border: none;
-                color: #06c167;
-                font-size: 16px;
-                font-weight: 500;
-                cursor: pointer;
-                font-family: "Inter", sans-serif;
-                margin-top: 0;
-            }
-
             .footer-container {
                 grid-template-columns: 2fr 1fr 1fr 1.5fr;
                 gap: 40px;
+                max-width: 1440px;
+                margin: 0 auto;
             }
 
             .footer-brand {
@@ -1000,10 +929,12 @@
             .hamburger {
                 display: none;
             }
+
             .desktop-nav ul {
                 display: flex;
                 gap: 20px;
             }
+
             .desktop-nav ul li {
                 list-style: none;
                 font-family: Inter, sans-serif;
@@ -1012,17 +943,20 @@
                 font-style: Regular;
                 font-size: 16px;
             }
+
             nav {
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
                 gap: 243px;
             }
+
             .hero {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
             }
+
             .title {
                 white-space: pre-line;
                 line-height: 1.2;
@@ -1033,13 +967,16 @@
                 line-height: 1.6;
                 max-width: 500px;
             }
+
             .contents h1,
             .contents p {
                 text-align: start;
             }
+
             .contents p {
                 margin: 0;
             }
+
             .contents button {
                 width: 200px;
                 height: 68px;
@@ -1051,6 +988,7 @@
             .ratings2 {
                 opacity: 0;
             }
+
             .ratings-custom1,
             .ratings-custom2 {
                 width: 230px;
@@ -1061,6 +999,7 @@
                 justify-content: center;
                 border-radius: 30px;
             }
+
             .images-elements {
                 z-index: 1;
             }
@@ -1075,40 +1014,39 @@
                 line-height: 100%;
                 font-family: "Inter", sans-serif;
             }
+
             .ratings-custom1 {
-                position: relative;
-                top: 86px;
-                left: -128px;
+                position: absolute;
+                width: 230px;
+                height: 53px;
+                top: 433px;
+                left: 712px;
+                opacity: 1;
             }
+
             .ratings-custom2 {
-                position: relative;
-                top: -12px;
-                left: 183px;
+                position: absolute;
+                width: 230px;
+                height: 53px;
+                top: 342px;
+                left: 1082px;
+                opacity: 1;
             }
+
             .contents {
                 position: relative;
                 top: -101px;
             }
+
             .desktop-nav ul li a {
                 text-decoration: none;
                 color: black;
             }
+
             .desktop-nav ul li a:hover {
                 color: #00a86b;
             }
-            .company-logo {
-                display: flex;
-                height: 130px;
-                position: relative;
-                top: -128px;
-            }
-            .company-logo .image {
-                margin-left: 286px;
-            }
-            .company-logo img {
-                width: 141px;
-                height: 30px;
-            }
+
             .desktop-nav ul {
                 list-style: none;
                 display: flex;
@@ -1134,7 +1072,8 @@
                 gap: 70px;
                 padding: 60px 0;
                 background-color: #fff;
-                flex-wrap: wrap; /* responsive */
+                flex-wrap: wrap;
+                /* responsive */
             }
 
             .feature {
@@ -1181,6 +1120,7 @@
                 width: 1831px;
                 background-color: #d9d0d0;
             }
+
             .benefit-section {
                 width: 100%;
                 background-color: #fff;
@@ -1229,14 +1169,17 @@
                 width: 20px;
                 height: 20px;
             }
+
             .benefit-points {
                 margin-left: 25px;
             }
+
             .status {
                 display: flex;
                 align-items: center;
                 justify-content: center;
             }
+
             .counts {
                 display: flex;
             }
@@ -1245,13 +1188,16 @@
                 text-align: start;
                 font-size: 60px;
             }
+
             .contents-promo h4 {
                 text-align: start;
                 margin-left: 35px;
             }
+
             .buttons button {
                 width: 233px;
             }
+
             button:hover {
                 scale: 1.1;
                 background-color: #0b4d35;
@@ -1259,16 +1205,19 @@
                 -webkit-box-shadow: 0px 30px 69px -7px rgba(0, 0, 0, 0.98);
                 -moz-box-shadow: 0px 30px 69px -7px rgba(0, 0, 0, 0.98);
             }
+
             .first-blog img {
                 width: 292px;
                 height: 292px;
             }
+
             .first-blog {
                 margin: 0;
                 height: auto;
                 width: auto;
                 display: flex;
             }
+
             .blog-contents {
                 display: none;
             }
@@ -1278,9 +1227,9 @@
                 border: 2px solid #06c167;
                 position: relative;
                 width: 292px;
-
                 height: 292px;
             }
+
             .first-blog .blog-content h4 {
                 font-family: Inter, sans-serif;
                 font-weight: 500;
@@ -1289,6 +1238,7 @@
                 text-align: left;
                 margin: 20px;
             }
+
             .first-blog .blog-content p {
                 font-family: Inter, sans-serif;
                 font-weight: 400;
@@ -1298,6 +1248,7 @@
                 color: #1d1d1f;
                 text-align: left;
             }
+
             .first-blog .blog-content a {
                 margin: 20px;
                 position: relative;
@@ -1309,23 +1260,28 @@
                 color: #06c167;
                 text-decoration: none;
             }
+
             .blogs {
                 width: 1170px;
                 height: 766px;
             }
+
             .blogs-of {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
+
             .first-blog-sector,
             .second-blog-sector {
                 display: flex;
             }
+
             .second-blog-sector {
                 position: relative;
                 top: -7px;
             }
+
             .blog-content2 {
                 order: 1;
             }
@@ -1333,6 +1289,7 @@
             .images-blog2 {
                 order: 2;
             }
+
             .product-card {
                 display: flex;
                 gap: 88px;
@@ -1340,86 +1297,63 @@
                 align-items: center;
                 margin-right: 30px;
             }
+
             .product-section-heading h3 {
                 font-family: Inter, sans-serif;
                 text-align: start;
                 font-weight: 500;
                 font-size: 60px;
             }
+
             .product-section-heading p {
                 text-align: start;
             }
+
             .product-section-heading p,
             .product-section-heading h3 {
                 margin-left: 164px;
                 position: relative;
                 top: 98px;
             }
-            .photo-of-end-section {
-                display: none;
-            }
-            .photo-of-end-section2 {
-                width: 1170px;
-                height: 460px;
-                background: #06c167;
-                margin-top: 90px;
-                position: relative;
-            }
+
             .border-parent {
                 border: 2px solid #76767540;
             }
+
             .features-section .feature-group1,
-            .features-section .feature-group2{
+            .features-section .feature-group2 {
                 display: flex;
             }
+
             .feature-group2,
-            .feature-group1{
+            .feature-group1 {
                 gap: 30px;
             }
 
-            .photo-of-end-section2 .content-of-end h2 {
-                font-family: Inter, sans-serif;
-                font-weight: 500;
-                font-style: Medium;
-                color: #ffffff;
-                font-weight: 600;
-                font-style: Semi Bold;
-                font-size: 60px;
-
-                text-align: center;
-            }
-            .photo-of-end-section2 .content-of-end button {
-                width: 293px;
-                height: 79px;
-                background-color: white;
-                border: none;
-                color: #06c167;
-                font-size: 16px;
-                font-weight: 500;
-                cursor: pointer;
-                font-size: 16px;
-                font-family: "Inter", sans-serif;
-                margin-top: 45px;
-            }
             .end-section {
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
+
             .footer-of-desktop,
             .sections-footer {
                 display: flex;
             }
+
             .message-get-in-touch {
                 text-align: center;
             }
-            .status-img1{
+
+            .status-img1 {
                 display: none;
             }
-            .blog-content a:hover{
+
+            .blog-content a:hover {
                 text-shadow: 12px 12px 14px rgba(0, 0, 0, 1);
                 scale: 1.1;
             }
+
             .message-get-in-touch h3 {
                 font-family: Inter, sans-serif;
                 font-weight: 400;
@@ -1428,6 +1362,7 @@
                 text-align: start;
                 margin: 31px;
             }
+
             .message-get-in-touch p {
                 font-family: Inter, sans-serif;
                 font-weight: 400;
@@ -1437,6 +1372,7 @@
                 text-align: start;
                 white-space: pre-line;
             }
+
             .message-get-in-touch input {
                 width: 205px;
                 height: 50px;
@@ -1451,6 +1387,7 @@
                 font-size: 16px;
                 font-family: "Inter", sans-serif;
             }
+
             .message-get-in-touch button {
                 background-color: #06c167;
                 border: none;
@@ -1466,6 +1403,7 @@
                 height: 50px;
                 opacity: 1;
             }
+
             .footer-content p {
                 font-family: Inter, sans-serif;
                 font-weight: 400;
@@ -1476,6 +1414,7 @@
                 margin: 70px;
                 white-space: pre-line;
             }
+
             .footer-features1 h2,
             .footer-features1 h5,
             .footer-features2 h2,
@@ -1483,144 +1422,237 @@
                 text-align: start;
                 justify-content: start;
             }
+
             .footer-features1 h2,
             .footer-features2 h2 {
                 position: relative;
                 left: -10px;
             }
+
             .message-get-in-touch input,
             .message-get-in-touch button {
                 position: relative;
                 left: 28px;
             }
+
             .footer-of-desktop {
                 gap: 60px;
             }
+
             .footer-content {
                 position: relative;
                 left: 54px;
             }
+
             .icon-footer {
                 position: relative;
                 top: -40px;
                 left: -23px;
             }
+
             footer {
                 margin-left: 0;
                 margin-top: 65px;
             }
+
             .copyright {
                 margin-right: 0;
             }
+
             .icon-footer i:hover {
                 scale: 1.1;
                 box-shadow: -2px 19px 46px -5px rgba(0, 0, 0, 0.83);
                 -webkit-box-shadow: -2px 19px 46px -5px rgba(0, 0, 0, 0.83);
                 -moz-box-shadow: -2px 19px 46px -5px rgba(0, 0, 0, 0.83);
             }
+
+            /* Updated desktop hero layout for exact positioning */
+            .hero-wrapper {
+                position: relative;
+                width: 1440px;
+                height: 798px;
+                margin: 0 auto;
+                background-color: #f3fcf7;
+                overflow: hidden;
+            }
+
+            .hero-img {
+                position: absolute;
+                width: 468px;
+                height: 634px;
+                top: 139px;
+                left: 802px;
+                background: url('./assets/Hero-image.png') no-repeat center center;
+                background-size: contain;
+            }
+
+            .contents h1 {
+                position: absolute;
+                width: 533px;
+                height: 182px;
+                top: 187px;
+                left: 142px;
+                font-size: 58px;
+                line-height: 1.2;
+                text-align: left;
+                margin: 0;
+            }
+
+            .contents p {
+                position: absolute;
+                width: 533px;
+                height: 46px;
+                top: 380px;
+                left: 142px;
+                font-size: 14px;
+                text-align: left;
+                margin: 0;
+            }
+
+            /* New "Get Started" button - exactly as specified */
+            .get-started-btn {
+                position: absolute;
+                width: 200px;
+                height: 68px;
+                background-color: #06c167;
+                border: none;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+                font-family: "Inter", sans-serif;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                top: 456px;
+                left: 142px;
+                opacity: 1;
+                z-index: 10;
+            }
+
+            .get-started-btn i {
+                font-size: 18px;
+            }
+
+            .get-started-btn:hover {
+                background-color: #059669;
+            }
         }
+
         @media screen and (max-width: 768px) {
             .desktop-nav {
                 display: none;
             }
-            
+
             .hamburger {
                 display: block;
             }
-            
+
             .benefit-container,
             .status {
                 flex-direction: column;
             }
-            
+
             .footer-container {
                 flex-direction: column;
             }
-            
+
             .footer-links {
                 width: 100%;
             }
         }
+
         @media screen and (max-width: 375px) {
             .desktop-nav {
                 display: none;
             }
+
             .ratings-custom2,
             .ratings-custom1 {
                 display: none;
             }
+
             .features-section {
                 display: flex;
                 gap: 24px;
                 margin-left: 14px;
             }
+
             .icon-box img {
                 margin: 21px;
             }
+
             .text-box {
                 font-family: Inter, sans-serif;
                 font-weight: 400;
                 font-size: 18px;
                 color: #1d1d1f;
             }
-            .benefit-img{
+
+            .benefit-img {
                 margin: 26px;
             }
-            .benefit-points h3 img{
+
+            .benefit-points h3 img {
                 margin: 13px;
                 position: relative;
                 top: 16px;
             }
+
             .status-img1 img {
-            margin: 30px;
-        }
-        .status-img2{
-        display: none;
-        }
-        .benefit-points h3{
-            font-weight: 300px;
-            
-        }
-        .photo-of-end-section2{
-            display: none;
-        }
-        .blog-content {
-            background-color: #f0f1ec;
-            height: 280px;
-            width: 340px;
-            left: -10px;
-            border: 2px solid #06c167;
-            position: relative;
-            bottom: 5px;
-        }
-        .blog-content h4 {
-            font-family: Inter, sans-serif;
-            font-weight: 500;
-            font-style: Medium;
-            font-size: 32px;
-            text-align: left;
-            margin: 20px;
-        }
-        .blog-content p {
-            font-family: Inter, sans-serif;
-            font-weight: 400;
-            font-style: Regular;
-            font-size: 16px;
-            color: #1d1d1f;
-            text-align: left;
-            margin: 20px;
-        }
-        .blog-content a {
-            font-family: Inter, sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-            color: #06c167;
-            text-decoration: none;
-            margin: 40px;
-        }
-        .footer-column {
-            min-width: 100%;
-        }
+                margin: 30px;
+            }
+
+            .status-img2 {
+                display: none;
+            }
+
+            .benefit-points h3 {
+                font-weight: 300px;
+            }
+
+            .blog-content {
+                background-color: #f0f1ec;
+                height: 280px;
+                width: 340px;
+                left: -10px;
+                border: 2px solid #06c167;
+                position: relative;
+                bottom: 5px;
+            }
+
+            .blog-content h4 {
+                font-family: Inter, sans-serif;
+                font-weight: 500;
+                font-style: Medium;
+                font-size: 32px;
+                text-align: left;
+                margin: 20px;
+            }
+
+            .blog-content p {
+                font-family: Inter, sans-serif;
+                font-weight: 400;
+                font-style: Regular;
+                font-size: 16px;
+                color: #1d1d1f;
+                text-align: left;
+                margin: 20px;
+            }
+
+            .blog-content a {
+                font-family: Inter, sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                color: #06c167;
+                text-decoration: none;
+                margin: 40px;
+            }
+
+            .footer-column {
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -1635,7 +1667,6 @@
                     <img src="assets/Logo.png" alt="Foodies-logo">
                 </div>
                 <!-- Nav Logo End -->
-
                 <!-- Desktop screen nav bar start -->
                 <div class="desktop-nav">
                     <ul>
@@ -1647,18 +1678,14 @@
                     </ul>
                 </div>
                 <!-- Desktop screen nav bar end -->
-
                 <!-- Nav Mobile Hamburger start -->
                 <div class="hamburger">
-                    <div class="hamburger">
-                        <div class="line1"></div>
-                        <div class="line2"></div>
-                        <div class="line3"></div>
-                    </div>
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
                 </div>
                 <!-- Nav Mobile Hamburger End -->
             </nav>
-
             <!-- mobile drawer (place after nav) -->
             <div class="mobile-drawer" aria-hidden="true">
                 <div class="panel" role="menu" aria-label="Mobile menu">
@@ -1672,296 +1699,280 @@
             </div>
         </div>
         <!-- Navigation end -->
-
-        <!-- Hero Section Start -->
-        <div class="hero">
-            <!-- Hero Content Start -->
+        <!-- Hero Section Start (Desktop Fixed Layout) -->
+        <div class="hero-wrapper">
+            <div class="hero-img"></div>
             <div class="contents">
                 <h1 class="title">
                     We're Serious
                     For Food.
                 </h1>
-
                 <p class="desc">
                     We strive to provide a space where guests can connect with
                     themselves and explore their full potential, offering a safe place.
                 </p>
-
+                <!-- Original button hidden on desktop, kept for mobile fallback if needed -->
+                <button style="display: none;">Get Started <i class="fa-solid fa-right-long"></i></button>
+            </div>
+            <div class="ratings-custom1">
+                <p>5.0 Ratings </p>
+                <img src="./assets/Star.png" alt="">
+            </div>
+            <div class="ratings-custom2">
+                <img src="./assets/rate.png" alt="">
+                <p>Good Quality Product</p>
+            </div>
+            <div class="company-logo">
+                <img src="./assets/Group1.png" alt="">
+                <img src="./assets/Group2.png" alt="">
+                <img src="./assets/Group3.png" alt="">
+            </div>
+            <!-- New "Get Started" button added here -->
+            <button class="get-started-btn">Get Started <i class="fa-solid fa-right-long"></i></button>
+        </div>
+        <!-- Hero Section End -->
+        <!-- Mobile/Original Hero Fallback (hidden on desktop) -->
+        <div class="hero" style="display: none;">
+            <!-- Original mobile hero content here if needed -->
+            <div class="contents">
+                <h1 class="title">
+                    We're Serious
+                    For Food.
+                </h1>
+                <p class="desc">
+                    We strive to provide a space where guests can connect with
+                    themselves and explore their full potential, offering a safe place.
+                </p>
                 <button>Get Started <i class="fa-solid fa-right-long"></i></button>
             </div>
-            <!-- Hero Content End -->
-            
-           <!-- Hero Photos start -->
-<div class="images-elements">
-    <div class="ratings">
-        <p>5.0 Ratings </p>
-        <img src="./assets/icon.png" alt="">
-        <img src="./assets/star-icon.png" alt="">
-        <img src="./assets/star-icon.png" alt="">
-        <img src="./assets/star-icon.png" alt="">
-        <img src="./assets/star-icon.png" alt="">
-    </div>
-    <div class="ratings ratings2">
-        <img src="./assets/Hero-image.png" alt="">
-        <p>Good Quality Product</p>
-    </div>
-    <div class="ratings-custom1">
-        <p>5.0 Ratings </p>
-        <img src="./assets/Star.png" alt="">
-    </div>
-    <div class="ratings-custom2">
-        <img src="./assets/rate.png" alt="">
-        <p>Good Quality Product</p>
-    </div>
-</div>
-<!-- Hero Photos End -->
-</div>
-
-<div class="company-logo">
-    <img src="./assets/Group1.png" alt="" class="image">
-    <img src="./assets/Group2.png" alt="">
-    <img src="./assets/Group3.png" alt="">
-</div>
-<!-- Hero Section End -->
-
-<!-- Mid Level or Container section start -->
-<div class="hero-end-line"></div>
-<section class="features-section">
-    <div class="feature-group1">
-        <div class="feature">
-            <div class="icon-box">
-                <img src="./assets/icon.png" alt="Free Shipping">
-            </div>
-            <div class="text-box">
-                <h3>Free Shipping</h3>
-                <p>Orders over $140</p>
+            <div class="images-elements">
+                <!-- Mobile ratings if needed -->
             </div>
         </div>
-        
-        <div class="feature">
-            <div class="icon-box">
-                <img src="./assets/icon2.png" alt="Quick Payment">
-            </div>
-            <div class="text-box">
-                <h3>Quick Payment</h3>
-                <p>100% secure payment</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="feature-group2">
-        <div class="feature">
-            <div class="icon-box">
-                <img src="./assets/icon3.png" alt="Special Promo">
-            </div>
-            <div class="text-box">
-                <h3>Special Promo</h3>
-                <p>Get special promo</p>
-            </div>
-        </div>
-        
-        <div class="feature">
-            <div class="icon-box">
-                <img src="./assets/icon4.png" alt="24/7 Support">
-            </div>
-            <div class="text-box">
-                <h3>24/7 Support</h3>
-                <p>Ready support</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="hero-end-line"></div>
-<!-- Mid Level or Container section end -->
-
-<!-- Review And Promo section start -->
-<div class="review-promo-section">
-    <section class="benefit-section">
-        <div class="benefit-container">
-            <div class="benefit-img">
-                <img src="./assets/vagitable.png" alt="Healthy Food">
-            </div>
-
-            <div class="benefit-content">
-                <h4>Our Benefit</h4>
-                <h2>The More Healthy <br> Food The Better</h2>
-
-                <div class="benefit-points">
-                    <h3><img src="./assets/Icon-awesome-check.png" alt=""> Be Alive With Veggie Food.</h3>
-                    <h3><img src="./assets/Icon-awesome-check.png" alt=""> It's The Place To Be.</h3>
-                    <h3><img src="./assets/Icon-awesome-check.png" alt=""> Nonstop Veggie Food.</h3>
-                    <h3><img src="./assets/Icon-awesome-check.png" alt=""> The Best Silk Dish In Town.</h3>
-                    <h3><img src="./assets/Icon-awesome-check.png" alt=""> Truffles, Egg & Pumpkin Spice.</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="status">
-        <div class="status-content">
-            <h4>Our Stars</h4>
-            <h2>Veggie Food Goes<br>On And Always On</h2>
-
-            <div class="counts">
-                <div class="count-item">
-                    <h3>1,500</h3>
-                    <p>Sold Product</p>
-                </div>
-                <div class="count-item">
-                    <h3>500</h3>
-                    <p>Positive Feedback</p>
-                </div>
-                <div class="count-item">
-                    <h3>400</h3>
-                    <p>Official Store</p>
-                </div>
-            </div>
-            <div class="buttons">
-                <button>Get Special Promo <i class="fa-solid fa-right-long"></i></button>
-            </div>
-        </div>
-
-        <div class="status-img">
-            <img src="./assets/lemonade.png" alt="Fruit Juice">
-        </div>
-    </div>
-
-
-    <div class="OurFeatures-blog">
-        <div class="headings">
-            <p>Our Features</p>
-            <h3>Variety Of Veggie Foods</h3>
-        </div>
-        
-        <div class="blogs-of">
-            <div class="blogs">
-                <div class="first-blog-sector">
-                    <div class="first-blog ">
-                        <div class="images-blog">
-                            <img src="./assets/vagies.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h4>Veggies Are <br> Forever</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
-                        </div>
-                        <div class="blog-contents">
-                            <h4>Veggies Are <br> Forever</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
-                        </div>
+        <!-- Mid Level or Container section start -->
+        <div class="hero-end-line"></div>
+        <section class="features-section">
+            <div class="feature-group1">
+                <div class="feature">
+                    <div class="icon-box">
+                        <img src="./assets/icon.png" alt="Free Shipping">
                     </div>
-                    <div class="first-blog first-blogs">
-                        <div class="images-blog">
-                            <img src="./assets/papaya.png" alt="">
-                        </div>
-                        <div class="blog-content">
-                            <h4>Good For Your <br> Skin</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
-                        </div>
-                        <div class="blog-contents">
-                            <h4>Good For Your <br> Skin</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                    <div class="text-box">
+                        <h3>Free Shipping</h3>
+                        <p>Orders over $140</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon-box">
+                        <img src="./assets/icon2.png" alt="Quick Payment">
+                    </div>
+                    <div class="text-box">
+                        <h3>Quick Payment</h3>
+                        <p>100% secure payment</p>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-group2">
+                <div class="feature">
+                    <div class="icon-box">
+                        <img src="./assets/icon3.png" alt="Special Promo">
+                    </div>
+                    <div class="text-box">
+                        <h3>Special Promo</h3>
+                        <p>Get special promo</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon-box">
+                        <img src="./assets/icon4.png" alt="24/7 Support">
+                    </div>
+                    <div class="text-box">
+                        <h3>24/7 Support</h3>
+                        <p>Ready support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="hero-end-line"></div>
+        <!-- Mid Level or Container section end -->
+        <!-- Review And Promo section start -->
+        <div class="review-promo-section">
+            <section class="benefit-section">
+                <div class="benefit-container">
+                    <div class="benefit-img">
+                        <img src="./assets/vagitable.png" alt="Healthy Food">
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Our Benefit</h4>
+                        <h2>The More Healthy <br> Food The Better</h2>
+                        <div class="benefit-points">
+                            <h3><img src="./assets/Icon-awesome-check.png" alt=""> Be Alive With Veggie Food.</h3>
+                            <h3><img src="./assets/Icon-awesome-check.png" alt=""> It's The Place To Be.</h3>
+                            <h3><img src="./assets/Icon-awesome-check.png" alt=""> Nonstop Veggie Food.</h3>
+                            <h3><img src="./assets/Icon-awesome-check.png" alt=""> The Best Silk Dish In Town.</h3>
+                            <h3><img src="./assets/Icon-awesome-check.png" alt=""> Truffles, Egg & Pumpkin Spice.</h3>
                         </div>
                     </div>
                 </div>
-
-                <div class="second-blog-sector">
-                    <div class="first-blog">
-                        <div class="images-blog images-blog2">
-                            <img src="./assets/fruits.png" alt="">
+            </section>
+            <div class="status">
+                <div class="status-content">
+                    <h4>Our Stars</h4>
+                    <h2>Veggie Food Goes<br>On And Always On</h2>
+                    <div class="counts">
+                        <div class="count-item">
+                            <h3>1,500</h3>
+                            <p>Sold Product</p>
                         </div>
-                        <div class="blog-content blog-content2">
-                            <h4>Veggie Food <br> Groove</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                        <div class="count-item">
+                            <h3>500</h3>
+                            <p>Positive Feedback</p>
                         </div>
-                        <div class="blog-contents">
-                            <h4>Veggie Food <br> Groove</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                        <div class="count-item">
+                            <h3>400</h3>
+                            <p>Official Store</p>
                         </div>
                     </div>
-                    <div class="first-blog first-blogs">
-                        <div class="images-blog images-blog2">
-                            <img src="./assets/lime.png" alt="">
+                    <div class="buttons">
+                        <button>Get Special Promo <i class="fa-solid fa-right-long"></i></button>
+                    </div>
+                </div>
+                <div class="status-img">
+                    <img src="./assets/lemonade.png" alt="Fruit Juice">
+                </div>
+            </div>
+            <div class="OurFeatures-blog">
+                <div class="headings">
+                    <p>Our Features</p>
+                    <h3>Variety Of Veggie Foods</h3>
+                </div>
+                <div class="blogs-of">
+                    <div class="blogs">
+                        <div class="first-blog-sector">
+                            <div class="first-blog ">
+                                <div class="images-blog">
+                                    <img src="./assets/vagies.png" alt="">
+                                </div>
+                                <div class="blog-content">
+                                    <h4>Veggies Are <br> Forever</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                                <div class="blog-contents">
+                                    <h4>Veggies Are <br> Forever</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                            </div>
+                            <div class="first-blog first-blogs">
+                                <div class="images-blog">
+                                    <img src="./assets/papaya.png" alt="">
+                                </div>
+                                <div class="blog-content">
+                                    <h4>Good For Your <br> Skin</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                                <div class="blog-contents">
+                                    <h4>Good For Your <br> Skin</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blog-content blog-content2">
-                            <h4>That Comes <br> Close</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                        <div class="second-blog-sector">
+                            <div class="first-blog">
+                                <div class="images-blog images-blog2">
+                                    <img src="./assets/fruits.png" alt="">
+                                </div>
+                                <div class="blog-content blog-content2">
+                                    <h4>Veggie Food <br> Groove</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                                <div class="blog-contents">
+                                    <h4>Veggie Food <br> Groove</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                            </div>
+                            <div class="first-blog first-blogs">
+                                <div class="images-blog images-blog2">
+                                    <img src="./assets/lime.png" alt="">
+                                </div>
+                                <div class="blog-content blog-content2">
+                                    <h4>That Comes <br> Close</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                                <div class="blog-contents">
+                                    <h4>That Comes <br> Close</h4>
+                                    <p>We offer the following <br> services</p>
+                                    <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="blog-contents">
-                            <h4>That Comes <br> Close</h4>
-                            <p>We offer the following <br> services</p>
-                            <a href="#">Discover Now <i class="fa-solid fa-right-long"></i></a>
+                    </div>
+                </div>
+                <div class="product-section">
+                    <div class="product-section-heading">
+                        <p>Our Product</p>
+                        <h3>Most Popular Product</h3>
+                    </div>
+                    <div class="product-card">
+                        <div class="first-product">
+                            <img src="./assets/banana.png" alt="" class="first-product-img">
+                            <img src="assets/Star.png" alt="">
+                            <h3>Summer Veganie</h3>
+                            <span><del>$25</del><strong>$29</strong></span>
+                            <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
+                        </div>
+                        <div class="first-product border-parent">
+                            <img src="./assets/papaya.png" alt="" class="first-product-img">
+                            <img src="assets/Star.png" alt="">
+                            <h3>Greanie Seafood</h3>
+                            <span><del>$25</del><strong>$29</strong></span>
+                            <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
+                        </div>
+                        <div class="first-product border-parent">
+                            <img src="./assets/avagado.png" alt="" class="first-product-img">
+                            <img src="assets/Star.png" alt="">
+                            <h3>Fresh Vegetable</h3>
+                            <span><del>$25</del><strong>$29</strong></span>
+                            <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
+                        </div>
+                        <div class="first-product border-parent">
+                            <img src="./assets/orange.png" alt="" class="first-product-img">
+                            <img src="assets/Star.png" alt="">
+                            <h3>Fresh Meatyus</h3>
+                            <span><del>$25</del><strong>$29</strong></span>
+                            <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="product-section">
-            <div class="product-section-heading">
-                <p>Our Product</p>
-                <h3>Most Popular Product</h3>
+        <!-- Review And Promo section End -->
+        <!-- End Section start (Desktop absolute layout) -->
+        <div class="end-section">
+            <div class="photo-of-end-section2">
+                <div class="end-section-wrapper">
+                    <div class="end-bg-img">
+                        <img src="assets/veg-end.png" alt="Veggie Background">
+                    </div>
+                    <h2 class="end-title">Veggie Foods? Ingredients<br>You Want To Try</h2>
+                    <button class="end-button">Get Start <i class="fa-solid fa-right-long"></i></button>
+                </div>
             </div>
-            <div class="product-card">
-                <div class="first-product">
-                    <img src="./assets/banana.png" alt="" class="first-product-img">
-                    <img src="assets/Star.png" alt="">
-                    <h3>Summer Veganie</h3>
-                    <span><del>$25</del><strong>$29</strong></span>
-                    <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
-                </div>
-                <div class="first-product border-parent">
-                    <img src="./assets/papaya.png" alt="" class="first-product-img">
-                    <img src="assets/Star.png" alt="">
-                    <h3>Greanie Seafood</h3>
-                    <span><del>$25</del><strong>$29</strong></span>
-                    <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
-                </div>
-                <div class="first-product border-parent">
-                    <img src="./assets/avagado.png" alt="" class="first-product-img">
-                    <img src="assets/Star.png" alt="">
-                    <h3>Fresh Vegetable</h3>
-                    <span><del>$25</del><strong>$29</strong></span>
-                    <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
-                </div>
-                <div class="first-product border-parent">
-                    <img src="./assets/orange.png" alt="" class="first-product-img">
-                    <img src="assets/Star.png" alt="">
-                    <h3>Fresh Meatyus</h3>
-                    <span><del>$25</del><strong>$29</strong></span>
-                    <button>Buy Now <i class="fa-solid fa-right-long"></i></button>
+            <!-- Mobile fallback -->
+            <div class="photo-of-end-section">
+                <div class="content-of-end">
+                    <h2>Veggie Foods? Ingredients <br> You Want To Try</h2>
+                    <button>Get Start <i class="fa-solid fa-right-long"></i></button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- Review And Promo section End -->
-
-<!-- End Section start -->
-<div class="end-section">
-    <div class="photo-of-end-section">
-        <div class="content-of-end">
-            <h2>Veggie Foods? Ingredients <br> You Want To Try</h2>
-            <button>Get Started <i class="fa-solid fa-right-long"></i></button>
-        </div>
-    </div>
-    <div class="photo-of-end-section2">
-        <div class="content-of-end">
-            <h2>Veggie Foods? Ingredients <br> You Want To Try</h2>
-            <button>Get Started <i class="fa-solid fa-right-long"></i></button>
-        </div>
-    </div>
-</div>
-<!-- End Section End -->
-
-
+        <!-- End Section End -->
         <!-- Footer Section start -->
         <footer>
             <div class="footer-container">
@@ -1976,7 +1987,6 @@
                         <i class="fa-brands fa-twitter"></i>
                     </div>
                 </div>
-
                 <div class="footer-links">
                     <div class="footer-column">
                         <h3>About Us</h3>
@@ -1987,7 +1997,6 @@
                             <li><a href="#">Company</a></li>
                         </ul>
                     </div>
-
                     <div class="footer-column">
                         <h3>Company</h3>
                         <ul>
@@ -1997,7 +2006,6 @@
                             <li><a href="#">Sitemap</a></li>
                         </ul>
                     </div>
-
                     <div class="footer-subscribe">
                         <h3>Get in touch</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
@@ -2008,13 +2016,12 @@
                     </div>
                 </div>
             </div>
-
             <div class="copyright">
                 <p>Copyright © 2021 Foodies.</p>
             </div>
         </footer>
-<!-- Footer Section End -->
-</div>
-
+        <!-- Footer Section End -->
+    </div>
 </body>
+
 </html>
