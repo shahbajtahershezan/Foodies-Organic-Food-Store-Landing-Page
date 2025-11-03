@@ -1,8 +1,7 @@
 # Assignment : 02
 ### Name : Md. Shahbaj Taher
 ### Email: shahbajtahershezan@gmail.com
-### Live Url: https://curious-travesseiro-4c84b4.netlify.app/
-
+### Live Url: https://tangerine-tartufo-6c2ab9.netlify.app/
 # Foodies Organic Food Store Landing Page
 
 A modern, responsive landing page for an organic food store showcasing fresh vegetables and healthy food products.
